@@ -1,0 +1,29 @@
+{
+  "name": "feedjolt",
+  "version": "1.0.0",
+  "description": "Zapier Platform CLI integration for Feedjolt customer feedback boards",
+  "homepage": "https://www.feedjolt.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --testTimeout 10000",
+    "validate": "zapier-platform validate"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "zapier-platform-core": "19.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nock": "^13.5.6",
+    "zapier-platform-cli": "19.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ]
+  },
+  "private": true
+}
