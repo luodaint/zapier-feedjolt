@@ -1,7 +1,7 @@
 {
   "name": "feedjolt",
-  "version": "1.0.0",
-  "description": "Zapier Platform CLI integration for Feedjolt customer feedback boards",
+  "version": "1.0.1",
+  "description": "Feedjolt is a customer feedback platform for boards, posts, roadmap, and changelog.",
   "homepage": "https://www.feedjolt.com",
   "main": "index.js",
   "scripts": {
