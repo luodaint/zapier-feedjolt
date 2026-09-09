@@ -8,6 +8,7 @@ const workspace = require('./triggers/workspace');
 const board = require('./triggers/board');
 const status = require('./triggers/status');
 const post = require('./triggers/post');
+const version = require('./triggers/version');
 
 const listWorkspaces = require('./searches/listWorkspaces');
 const listBoards = require('./searches/listBoards');
@@ -27,6 +28,10 @@ module.exports = {
 
   authentication,
 
+  flags: {
+    cleanInputData: false,
+  },
+
   beforeRequest: [...befores],
   afterResponse: [...afters],
 
@@ -36,6 +41,7 @@ module.exports = {
     [board.key]: board,
     [status.key]: status,
     [post.key]: post,
+    [version.key]: version,
   },
 
   searches: {

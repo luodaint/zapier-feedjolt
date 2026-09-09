@@ -9,6 +9,23 @@ const {
 } = require('../lib/samples');
 
 describe('searches', () => {
+  it('lists workspaces and filters by name', async () => {
+    api()
+      .get('/api/v1/workspaces')
+      .reply(200, [
+        { id: 'w1', name: 'Acme', slug: 'acme' },
+        { id: 'w2', name: 'Other', slug: 'other' },
+      ]);
+
+    const results = await appTester(
+      App.searches.list_workspaces.operation.perform,
+      authBundle({ name: 'acme' }),
+    );
+
+    expect(results).toHaveLength(1);
+    expect(results[0].slug).toBe('acme');
+  });
+
   it('lists posts', async () => {
     api()
       .get('/api/v1/workspaces/acme/posts')

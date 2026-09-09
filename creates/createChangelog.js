@@ -29,9 +29,11 @@ module.exports = {
       },
       {
         key: 'version_id',
-        label: 'Version ID',
+        label: 'Version',
         type: 'string',
         required: false,
+        dynamic: 'version.id.name',
+        helpText: 'Optional product version to attach to this changelog entry.',
       },
     ],
     sample: SAMPLE_CHANGELOG,

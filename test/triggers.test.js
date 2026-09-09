@@ -69,4 +69,21 @@ describe('triggers', () => {
 
     expect(results[0].slug).toBe('feature-requests');
   });
+
+  it('lists versions for changelog dropdowns', async () => {
+    api()
+      .get('/api/v1/workspaces/acme/versions')
+      .reply(200, {
+        versions: [{ id: 'v1', name: '1.4.0', status: 'PLANNED' }],
+        total: 1,
+      });
+
+    const results = await appTester(
+      App.triggers.version.operation.perform,
+      authBundle({ workspace_slug: 'acme' }),
+    );
+
+    expect(results[0].id).toBe('v1');
+    expect(results[0].name).toBe('1.4.0');
+  });
 });

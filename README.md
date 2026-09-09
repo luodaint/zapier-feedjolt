@@ -40,9 +40,9 @@ Copy `.env.example` to `.env` only if you later run live `zapier-platform invoke
 | Create | `update_post_status` | `PUT /workspaces/{slug}/posts/{post_id}/status` |
 | Create | `create_changelog` | `POST /workspaces/{slug}/changelog` (`ChangelogCreate`) |
 
-Hidden triggers (`workspace`, `board`, `status`, `post`) power dynamic dropdowns:
+Hidden triggers (`workspace`, `board`, `status`, `post`, `version`) power dynamic dropdowns:
 
-`workspace_slug` → `board` / `status` / `post` as appropriate.
+`workspace_slug` → boards / statuses / posts / versions as appropriate.
 
 ## Planned for v1.1
 

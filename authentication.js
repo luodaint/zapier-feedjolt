@@ -42,7 +42,7 @@ module.exports = {
       type: 'password',
       required: true,
       helpText:
-        'Create a workspace API key in Feedjolt **Settings → API keys**. Keys start with `fjk_`.',
+        'Create a workspace API key in Feedjolt **Settings → API keys**. Keys start with `fjk_`. See the [Feedjolt developer docs](https://www.feedjolt.com/en/docs/developers).',
     },
   ],
   test,

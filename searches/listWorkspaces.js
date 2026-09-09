@@ -12,7 +12,15 @@ module.exports = {
   },
   operation: {
     perform: listWorkspaces,
-    inputFields: [],
+    inputFields: [
+      {
+        key: 'name',
+        label: 'Name or Slug',
+        type: 'string',
+        required: false,
+        helpText: 'Optional. Filter workspaces by name or slug.',
+      },
+    ],
     sample: SAMPLE_WORKSPACE,
     outputFields: [
       { key: 'id', label: 'Workspace ID', type: 'string' },
