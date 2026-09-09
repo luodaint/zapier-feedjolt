@@ -1,6 +1,6 @@
 {
   "name": "feedjolt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Feedjolt is a customer feedback platform for boards, posts, roadmap, and changelog.",
   "homepage": "https://www.feedjolt.com",
   "main": "index.js",
